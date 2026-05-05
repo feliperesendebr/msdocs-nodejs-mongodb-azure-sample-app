@@ -8,8 +8,8 @@ services:
     volumes:
       - ../..:/workspaces:cached
 
-    environment: 
-      MONGODB_URI: mongodb://${ENV_DB_USER}:${ENV_DB_PASSWORD}@db:27017/${ENV_DB_DATABASE}?authSource=admin
+    environment:
+      MONGODB_URI: ${MONGODB_URI}
 
     # Overrides default command so things don't shut down after the process ends.
     command: sleep infinity
